@@ -17,11 +17,11 @@ import java.util.List;
 @Builder
 @Document(collection = "accounts")
 public class Account {
-    @Size(min = 2, message = "Username must have at least 2 characters!")
+    @Size(min = 2, message = "Username must have at least 2 characters")
     private String username;
-    @Size(min = 7, message = "The password should have at least 7 characters!")
+    @Size(min = 7, message = "The password should have at least 7 characters")
     private String password;
-    @NotNull(message = "Please specify at least ONE role!")
+    @NotNull(message = "Please specify at least ONE role")
     private List<Role> roles;
 
 }

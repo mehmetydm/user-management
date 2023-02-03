@@ -19,12 +19,12 @@ import javax.validation.constraints.NotNull;
 public class User {
     @Id
     private String id;
-    @NotEmpty(message="First Name is mandatory!")
+    @NotEmpty(message="First Name is mandatory")
     private String firstName;
-    @NotEmpty(message="Last Name is mandatory!")
+    @NotEmpty(message="Last Name is mandatory")
     private String lastName;
-    @Email(message="Please provide a valid email address!")
+    @Email(message="Please provide a valid email address")
     private String emailAddress;
-    @NotNull(message = "Please provide valid account information!")
+    @NotNull(message = "Please provide valid account information")
     private Account account;
 }
