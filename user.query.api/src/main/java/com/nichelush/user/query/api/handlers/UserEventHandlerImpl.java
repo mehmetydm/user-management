@@ -1,8 +1,8 @@
 package com.nichelush.user.query.api.handlers;
 
 import com.nichelush.user.core.events.UserRegisteredEvent;
-import com.nichelush.user.core.events.UserRemoveEvent;
-import com.nichelush.user.core.events.UserUpdateEvent;
+import com.nichelush.user.core.events.UserRemovedEvent;
+import com.nichelush.user.core.events.UserUpdatedEvent;
 import com.nichelush.user.query.api.repositories.UserRepository;
 import org.axonframework.config.ProcessingGroup;
 import org.axonframework.eventhandling.EventHandler;
@@ -26,12 +26,12 @@ public class UserEventHandlerImpl implements UserEventHandler{
     }
     @EventHandler
     @Override
-    public void on(UserUpdateEvent event) {
+    public void on(UserUpdatedEvent event) {
         userRepository.save(event.getUser());
     }
     @EventHandler
     @Override
-    public void on(UserRemoveEvent event) {
+    public void on(UserRemovedEvent event) {
         userRepository.deleteById(event.getId());
     }
 }

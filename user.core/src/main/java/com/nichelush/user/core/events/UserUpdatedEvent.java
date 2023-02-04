@@ -6,7 +6,7 @@ import lombok.Data;
 
 @Data
 @Builder
-public class UserUpdateEvent {
+public class UserUpdatedEvent {
     private String id;
     private User user;
 }
